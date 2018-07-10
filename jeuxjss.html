@@ -1,0 +1,86 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+  var utilisateur = prompt("Choisissez vous pierre, feuille, ou ciseau?");
+
+
+
+if (! utilisateur) {
+    document.write("Choisissez vous pierre, feuille, ou ciseau?")
+    
+}else{
+    document.write("<p> Med "+""+utilisateur +"</p>")
+}
+
+    
+    var choixOrdi = Math.random();
+    if (choixOrdi  <0.37) {
+    choixOrdi="pierre";
+    
+
+    
+}else if(choixOrdi <= 0.65) {
+    choixOrdi="feuille" ;
+
+}else{
+    choixOrdi="ciseau"
+}
+
+document.write("<p> computer "+""+ choixOrdi + "</p>" )
+
+
+
+
+
+
+  var res = function(choixOrdi,utilisateur) {
+            if (choixOrdi === utilisateur) {
+                return "bousalem gagne";
+            }
+            
+            if (choixOrdi === "pierre") {
+                if (utilisateur === "ciseau") {
+                    // rock wins
+                    return "You win!";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
+                }
+            }
+            if (choixOrdi === "feuille") {
+                if (utilisateur === "pierre") {
+                    // paper wins
+                    return "You win!";
+                } else {
+                    // scissors wins
+                    return "You lose! Try again.";
+                }
+            }
+            if (choixOrdi === "ciseau") {
+                if (utilisateur === "pierre") {
+                    // rock wins
+                    return "You lose! Try again.";
+                } else {
+                    // scissors wins
+                    return "You win!";
+                }
+            }
+        };
+
+        // Run the compare function
+        var results = res(choixOrdi,utilisateur);
+
+        // Display results
+        document.write("<br><hr><br>" + results);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
