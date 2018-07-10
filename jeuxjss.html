@@ -5,7 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script>
+    <style id="de1">
+    p,center {
+font-family: 'Times New Roman', Times, serif ;
+font-size: 50px;
+color: blue;
+
+    }
+    #b1 {
+        font-family: 'Times New Roman', Times, serif ;
+font-size: 50px;
+color: blue;
+
+
+    }
+    body {
+        background-image: url(img/jeux.jpg);
+background-size: 1080px;
+}
+    
+   #b7 {
+    background-color:red; /* Green */
+    border: none;
+    color: white;
+    padding: 32px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+    
+
+
+
+ s1 {
+    font-family: 'Times New Roman', Times, serif ;
+font-size: 50px;
+color: blue;
+
+background-image: url(./img/jeux.jpg);
+background-size: 1080px;
+ }   
+    </style>
+    <script id="s1" >
+    
+        function res() {
+            
+           
   var utilisateur = prompt("Choisissez vous pierre, feuille, ou ciseau?");
 
 
@@ -72,11 +118,25 @@ var res = function(choixOrdi,utilisateur) {
         var results = res(choixOrdi,utilisateur);
 
         // Display results
-        document.write("<br><hr><br>" + results);
-
+        document.write("<center><br><hr><br><center>" + results);
+       
+               
+            }
     </script>
 </head>
-<body>
-    
+<body  background="img/jeux.jpg" >
+    <div>
+<center>
+<button id="b7" name="debut" value="debut" onclick="res()" >
+
+debut
+
+</button>
+
+
+</center>
+
+
+    </div>
 </body>
 </html>
